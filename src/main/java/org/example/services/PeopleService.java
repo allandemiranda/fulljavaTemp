@@ -33,7 +33,7 @@ public class PeopleService implements DefaultService<PersonModel, Person> {
     }
 
     @SneakyThrows
-    public Stream<Person> selectAllOlderThanThirtyAndSetNullCountry() {
+    public Stream<Person> setToNullCountryThanThirtyAge() {
         return repository.loadFile(resourceFile).stream().map(person -> {
             if (person.getAge() > 30) {
                 person.setCountry(null);

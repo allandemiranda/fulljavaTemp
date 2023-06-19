@@ -28,11 +28,11 @@ public class GettingDataJob implements BatchJob {
     public void run() {
         //TODO: 3. Getting data from file “people.csv” (5 min) [GettingDataJob]
         //  -	Read the “people.csv” file.
-        //  -	Set, to all person that is older 30 years, the COUNTRY value to null (java null). [Mandatory use of "peopleService.selectAllOlderThanThirtyAndSetNullCountry()"]
+        //  -	Set, to all person that is older 30 years, the COUNTRY value to null (java null). [Mandatory use of "peopleService.setToNullCountryThanThirtyAge()"]
         //  -	Then find the first line that in the column “COUNTRY” is the value “France”, and then print it on screen.
         //  -   If you don't find any row with the expected value, print a default Person object [see DEFAULT_PERSON variable].
 
-        String printOut = peopleService.selectAllOlderThanThirtyAndSetNullCountry()
+        String printOut = peopleService.setToNullCountryThanThirtyAge()
 
                 .collect(Collectors.toList()).get(0)
 
